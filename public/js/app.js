@@ -15,30 +15,34 @@ $(document).ready(function(){
   $('mem-minus').on('click', memSub);
   $('mem-recall').on('click', memDisplay);
   $('mem-clear').on('click', memClear);
-
+  $('#plus-minus').on('click', plusMinus);
+  $('#period').on('click', period);
+  $('#percentage').on('click', percentage);
+  $('#square').on('click', square);
+  $('#squareRoot').on('click', squareRoot);
 
 
   function updateDisplay(){
-    
+
   }
   function divide(){
-    
+
   }
 
   function multiply(){
-    
+
   }
 
   function subtract(){
-    
+
   }
 
   function equal(){
-    
+
   }
 
   function plus(){
-    
+
   }
 
   function clear(){
@@ -58,9 +62,21 @@ $(document).ready(function(){
   }
 
   function memDisplay(){
-    
+
   }
+  function plusMinus(){
 
+  }
+  function period(){
 
+  }
+  function percentage(){
 
+  }
+  function square(){
+
+  }
+  function squareRoot(){
+
+  }
 });
