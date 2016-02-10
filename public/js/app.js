@@ -3,7 +3,6 @@ $(document).ready(function(){
   var $display = $('#display');
   var lastOperation = '';
 
-
   $('#clear').on('click', clear);
   $('#plus').on('click', plus);
   $('#equal').on('click', equal);
@@ -21,9 +20,10 @@ $(document).ready(function(){
   $('#square').on('click', square);
   $('#squareRoot').on('click', squareRoot);
 
-
+  }
   function updateDisplay(){
-
+    var thing  = $(this).text();
+    console.log(thing);
   }
   function divide(){
 
@@ -46,7 +46,7 @@ $(document).ready(function(){
   }
 
   function clear(){
-    
+
   }
 
   function memAdd(){
