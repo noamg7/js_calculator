@@ -61,7 +61,7 @@ $(document).ready(function(){
       $display.text(result);
       calculator.reset();
     } else if(lastOperation === '-'){
-      calculator.subtract(num);
+      calculator.subtractFromMemorye(num);
       var result = calculator.result();
       $display.text(result);
       calculator.reset();
@@ -72,6 +72,16 @@ $(document).ready(function(){
       calculator.reset();
     } else if (lastOperation === '*') {
       calculator.multiply(num);
+      var result = calculator.result();
+      $display.text(result);
+      calculator.reset();
+    } else if (lastOperation === 'squareRoot'){
+      calculator.squareRoot(num);
+      var result = calculator.result();
+      $display.text(result);
+      calculator.reset();
+    } else if (lastOperation === 'square'){
+      calculator.square(num);
       var result = calculator.result();
       $display.text(result);
       calculator.reset();
@@ -87,7 +97,11 @@ $(document).ready(function(){
   }
 
   function clear(){
-
+    var displayText = $display.text();
+    var displayNum = parseFloat(displayText);
+    calculator.add(displayNum);
+    $display.text(0);
+    lastOperation = '';
   }
 
   function memAdd(){
@@ -125,6 +139,7 @@ $(document).ready(function(){
     calculator.add(displayNum);
     $display.text(0);
     lastOperation = 'squareRoot';
-
   }
+
+  
 });
