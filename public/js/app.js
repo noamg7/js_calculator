@@ -61,7 +61,7 @@ $(document).ready(function(){
       $display.text(result);
       calculator.reset();
     } else if(lastOperation === '-'){
-      calculator.subtractFromMemorye(num);
+      calculator.subtractFromMemory(num);
       var result = calculator.result();
       $display.text(result);
       calculator.reset();
@@ -75,7 +75,7 @@ $(document).ready(function(){
       var result = calculator.result();
       $display.text(result);
       calculator.reset();
-    } else if (lastOperation === 'squareRoot'){
+    } else if (lastOperation === '√'){
       calculator.squareRoot(num);
       var result = calculator.result();
       $display.text(result);
@@ -121,6 +121,11 @@ $(document).ready(function(){
   }
 
   function period(){
+    var displayText = $display.text();
+    var displayNum = parseFloat(displayText);
+    calculator.add(displayNum);
+    $display.text(0);
+    lastOperation = '.';
 
   }
   function percentage(){
@@ -131,15 +136,15 @@ $(document).ready(function(){
     var displayNum = parseFloat(displayText);
     calculator.add(displayNum);
     $display.text(0);
-    lastOperation = 'square';
+    lastOperation = 'sq';
   }
   function squareRoot(){
     var displayText = $display.text();
     var displayNum = parseFloat(displayText);
     calculator.add(displayNum);
     $display.text(0);
-    lastOperation = 'squareRoot';
+    lastOperation = '√';
   }
 
-  
+
 });
