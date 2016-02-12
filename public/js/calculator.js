@@ -6,8 +6,8 @@ var Calculator = {
   square: square,
   squareRoot: squareRoot,
   percentage: percentage,
-  period: period,
   multiply: multiply,
+  period: period,
   divide: divide,
   result: result,
   reset: reset,
@@ -21,9 +21,7 @@ function add(num){
 function percentage(num){
   this.current =num/100;
 }
-function period(num){
-  
-}
+
 function subtract(num){
   this.current -=num;
 }

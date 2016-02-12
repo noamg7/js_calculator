@@ -143,8 +143,12 @@ $(document).ready(function(){
   function memDisplay(){
 
   }
-
   function period(){
+    var displayText = $display.text();
+    var displayNum = parseFloat(displayText);
+    calculator.add(displayNum);
+    $display.text();
+    lastOperation = '.'
   
   }
   function percentage(){
