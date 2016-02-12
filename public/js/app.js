@@ -28,11 +28,8 @@ $(document).ready(function(){
   }
     console.log(num);
   }
-  function period(){/*
-    var displayText = $display.text();
-    var displayNum = parseFloat(displayText);
-    calculator.add(displayNum);
-    $display.text(0);*/
+  function period(){
+
   }
   function divide(){
     var displayText = $display.text();
@@ -88,7 +85,11 @@ $(document).ready(function(){
       calculator.reset();
     } else if (lastOperation === 'square'){
       calculator.square(num);
-      console.log("getting here");
+      var result = calculator.result();
+      $display.text(result);
+      calculator.reset();
+    } else if (lastOperation === '%'){
+      calculator.percentage(num);
       var result = calculator.result();
       $display.text(result);
       calculator.reset();
@@ -140,15 +141,14 @@ $(document).ready(function(){
   }
 
   function period(){
+
+  }
+  function percentage(){
     var displayText = $display.text();
     var displayNum = parseFloat(displayText);
     calculator.add(displayNum);
     $display.text(0);
-    lastOperation = '.';
-
-  }
-  function percentage(){
-
+    lastOperation = '%';
   }
   function square(){
     var displayText = $display.text();

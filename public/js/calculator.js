@@ -6,6 +6,7 @@ var Calculator = {
   square: square,
   squareRoot: squareRoot,
   percentage: percentage,
+  period: period,
   multiply: multiply,
   divide: divide,
   result: result,
@@ -17,12 +18,16 @@ var Calculator = {
 function add(num){
   this.current +=num;
 }
-function subtract(num){
-  this.current -=num;
-}
 function percentage(num){
 
 }
+function period(num){
+
+}
+function subtract(num){
+  this.current -=num;
+}
+
 function square(num){
   this.current = num * num;
 }
