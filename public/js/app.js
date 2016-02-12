@@ -22,7 +22,11 @@ $(document).ready(function(){
   function updateDisplay(){
     var num = $(this).text();
     if ($display.text() === '0') {
-      $display.text(num);
+      if(num === '.') {
+        $display.text('0'+ num);
+      } else {
+        $display.text(num);
+      }
   }else{
     $display.text($display.text()+num);
   }
@@ -149,7 +153,7 @@ $(document).ready(function(){
     calculator.add(displayNum);
     $display.text();
     lastOperation = '.'
-  
+
   }
   function percentage(){
     var displayText = $display.text();

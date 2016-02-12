@@ -7,21 +7,28 @@
 
 #content{
 margin-top: 30px;
+margin-left: 500px;
+width: 280px;
+padding-top: 10px;
+background-color: gray;
+font-size: 17px;
+border-radius: 5px;
 }
 
 #calculator-body {
   width: 260px;
   align-items: center;
   background-color: black;
+  border-radius: 5px;
 }
 
 #display {
   text-align: right;
   width: 220px;
   height: 50px;
-  border-style: groove;
   border-color: black;
-  background-color: white;
+  background-color: #39ac39;
+  border-radius: 5px;
   align-items: center;
   padding-right: 2px;
   padding-top: 10px;
@@ -41,5 +48,33 @@ margin-top: 30px;
 }
 
 #equal{
-
+ background-color: black;
+ color: white;
+ border-color: white;
+}
+#mem-plus{
+  background-color: black;
+  color: yellow;
+  border-color: white;
+}
+#mem-minus{
+  background-color: black;
+  color: yellow;
+  border-color: white;
+}
+#mem-recall{
+  background-color: black;
+  color: yellow;
+  border-color: white;
+}
+#mem-clear{
+  background-color: black;
+  color: yellow;
+  border-color: white;
+}
+#period{
+  background-color: green;
+}
+#clear{
+  background-color: gray;
 }
