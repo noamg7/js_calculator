@@ -28,6 +28,12 @@ $(document).ready(function(){
   }
     console.log(num);
   }
+  function period(){/*
+    var displayText = $display.text();
+    var displayNum = parseFloat(displayText);
+    calculator.add(displayNum);
+    $display.text(0);*/
+  }
   function divide(){
     var displayText = $display.text();
     var displayNum = parseFloat(displayText);
@@ -61,7 +67,7 @@ $(document).ready(function(){
       $display.text(result);
       calculator.reset();
     } else if(lastOperation === '-'){
-      calculator.subtractFromMemory(num);
+      calculator.subtract(num);
       var result = calculator.result();
       $display.text(result);
       calculator.reset();
@@ -82,6 +88,7 @@ $(document).ready(function(){
       calculator.reset();
     } else if (lastOperation === 'square'){
       calculator.square(num);
+      console.log("getting here");
       var result = calculator.result();
       $display.text(result);
       calculator.reset();
@@ -105,15 +112,27 @@ $(document).ready(function(){
   }
 
   function memAdd(){
-
+    var displayText = $display.text();
+    var displayNum = parseFloat(displayText);
+    calculator.add(displayNum);
+    $display.text(0);
+    lastOperation = 'm+';
   }
 
   function memSub(){
-
+    var displayText = $display.text();
+    var displayNum = parseFloat(displayText);
+    calculator.add(displayNum);
+    $display.text(0);
+    lastOperation = 'm-';
   }
 
   function memClear(){
-
+    var displayText = $display.text();
+    var displayNum = parseFloat(displayText);
+    calculator.add(displayNum);
+    $display.text(0);
+    lastOperation = 'mc';
   }
 
   function memDisplay(){
@@ -135,14 +154,14 @@ $(document).ready(function(){
     var displayText = $display.text();
     var displayNum = parseFloat(displayText);
     calculator.add(displayNum);
-    $display.text(0);
-    lastOperation = 'sq';
+    $display.text();
+    lastOperation = 'square';
   }
   function squareRoot(){
     var displayText = $display.text();
     var displayNum = parseFloat(displayText);
     calculator.add(displayNum);
-    $display.text(0);
+    $display.text();
     lastOperation = '√';
   }
 

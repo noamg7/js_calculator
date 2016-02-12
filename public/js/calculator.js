@@ -3,6 +3,9 @@ var Calculator = {
   memory: 0,
   add: add,
   subtract: subtract,
+  square: square,
+  squareRoot: squareRoot,
+  percentage: percentage,
   multiply: multiply,
   divide: divide,
   result: result,
@@ -12,16 +15,25 @@ var Calculator = {
 }
 
 function add(num){
-  this.current += num;
+  this.current +=num;
 }
 function subtract(num){
+  this.current -=num;
+}
+function percentage(num){
 
+}
+function square(num){
+  this.current = num * num;
+}
+function squareRoot(num){
+  this.current = Math.sqrt(num);
 }
 function multiply(num){
-
+  this.current *=num;
 }
 function divide(num){
-
+  this.current /=num;
 }
 function result(){
   return this.current;
