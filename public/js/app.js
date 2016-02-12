@@ -29,7 +29,11 @@ $(document).ready(function(){
     console.log(num);
   }
   function period(){
-
+    var displayText = $display.text();
+    var displayNum = parseFloat(displayText);
+    calculator.add(displayNum);
+    $display.text(0.);
+    lastOperation = '.';
   }
   function divide(){
     var displayText = $display.text();
@@ -141,13 +145,13 @@ $(document).ready(function(){
   }
 
   function period(){
-
+  
   }
   function percentage(){
     var displayText = $display.text();
     var displayNum = parseFloat(displayText);
     calculator.add(displayNum);
-    $display.text(0);
+    $display.text();
     lastOperation = '%';
   }
   function square(){

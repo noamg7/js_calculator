@@ -19,10 +19,10 @@ function add(num){
   this.current +=num;
 }
 function percentage(num){
-
+  this.current =num/100;
 }
 function period(num){
-
+  
 }
 function subtract(num){
   this.current -=num;
